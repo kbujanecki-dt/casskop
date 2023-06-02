@@ -39,7 +39,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: docker/cassandra-sidecar
-          tags: ghcr.io/cscetbon/instaclustr-icarus:${{ github.event.inputs.version }}
+          tags: ghcr.io/kbujanecki-dt/instaclustr-icarus:${{ github.event.inputs.version }}
           build-args: |
             openjre_image=base-openjre:${{ env.base_openjre_tag_state }}
             instaclustr_icarus_jar=icarus-${{ github.event.inputs.version }}.jar

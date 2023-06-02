@@ -8,7 +8,7 @@ on:
         required: true
 
 env:
-  IMAGE: ghcr.io/cscetbon/casskop-bootstrap:${{ github.event.inputs.alias }}
+  IMAGE: ghcr.io/kbujanecki-dt/casskop-bootstrap:${{ github.event.inputs.alias }}
 
 jobs:
 
@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: docker/bootstrap
-          tags: ghcr.io/cscetbon/casskop-bootstrap:${{ github.event.inputs.alias }}
+          tags: ghcr.io/kbujanecki-dt/casskop-bootstrap:${{ github.event.inputs.alias }}
 
       - name: Run Dgoss Tests
         run: |
