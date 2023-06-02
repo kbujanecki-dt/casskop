@@ -12,7 +12,7 @@ import (
 
 // RequeueWithError is a convenience wrapper around logging an error message
 // separate from the stacktrace and then passing the error through to the controller
-// manager
+// manager simple change
 func RequeueWithError(logger *logrus.Entry, msg string, err error) (reconcile.Result, error) {
 	// Info log the error message and then let the reconciler dump the stacktrace
 	logger.Info(msg)
